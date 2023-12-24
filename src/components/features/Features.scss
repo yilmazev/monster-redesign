@@ -1,0 +1,96 @@
+#features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5em 0;
+
+    .features-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5em;
+        width: 1140px;
+
+        .features-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .column-title {
+                background: -webkit-linear-gradient(180deg, #316806 50%, #4c9405);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 4em;
+                font-weight: 600;
+                padding: 0 0 .3em 0;
+            }
+
+            .column-paragraph {
+                color: #fff;
+                font-size: 1.1em;
+                font-weight: 400;
+                line-height: 1.2;
+                max-width: 800px;
+                text-align: center;
+            }
+
+            .features-character-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                width: 100%;
+
+                .features-character {
+                    width: 350px;
+                    border-radius: 1em;
+                    transition: .5s;
+
+                    &:hover {
+                        transform: translate(0, -0.5em);
+                        filter: brightness(1.1);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #features {
+        .features-container {
+            justify-content: center;
+            width: 100%;
+
+            .features-column {
+                width: 90%;
+
+                .features-character-list {
+                    .features-character {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #features {
+        .features-container {
+            .features-column {
+                .features-character-list {
+                    .features-character {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+#team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5em 0;
+
+    .team-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1140px;
+
+        .team-column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .column-title {
+                background: -webkit-linear-gradient(180deg, #316806 50%, #4c9405);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 4em;
+                font-weight: 600;
+                padding: 0 0 .3em 0;
+            }
+
+            .team-character-list {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    width: 100vw;
+                    left: 50%;
+                    right: auto;
+                    top: 164px;
+                    background-color: #203e03;
+                    height: 2px;
+                    margin: 0 0 0 -50vw;
+                    opacity: 0.85;
+                    content: '';
+                }
+
+                .card-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #080808;
+                    box-shadow: 0 0 0 1px #4c9405;
+                    border-radius: 1em;
+                    padding: 1em 2em;
+                    z-index: 1;
+                    transition: .5s;
+
+                    &:hover {
+                        box-shadow: 0 0 20px 1px #4c94054a;
+                        cursor: pointer;
+                    }
+
+                    .card-image {
+                        width: 130px;
+                        border-radius: 100px;
+                        image-rendering: -webkit-optimize-contrast;
+                        margin: 0 0 1em 0;
+                    }
+
+                    .card-title {
+                        color: #fff;
+                        font-size: 1.3em;
+                        font-weight: 500;
+                        text-align: center;
+                        padding: 0 0 .3em 0;
+                    }
+
+                    .card-biography {
+                        color: #919191;
+                        font-size: 1em;
+                        font-weight: 200;
+                        text-align: center;
+                        max-width: 200px;
+                    }
+
+                    .card-url-buttons {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 1em 0 0 0;
+
+                        .card-icon-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #4c9405;
+                            padding: .5em;
+                            border-radius: 100px;
+                            transition: .5s;
+                            
+                            &:hover {
+                                background-color: #316806;
+                                cursor: pointer;
+                            }
+
+                            .card-icon-image {
+                                width: 1.6em;
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #team {
+        .team-container {
+            width: 90%;
+
+            .team-column {
+                .team-character-list {
+                    flex-wrap: wrap;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
